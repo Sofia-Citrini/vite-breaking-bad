@@ -6,6 +6,7 @@
       <Filter></Filter>
 
       <AllCharacters></AllCharacters>
+      <TheLoader v-if="store.loading"></TheLoader>
     </main>
   </div>
   
@@ -14,13 +15,15 @@
 <script>
 import TheHeader from './components/TheHeader.vue';
 import Filter from './components/Filter.vue';
-import AllCharacters from './components/AllCharacters.vue'
+import AllCharacters from './components/AllCharacters.vue';
+import TheLoader from './components/TheLoader.vue';
+import {store} from './store'
 
 export default {
-  components: {TheHeader, Filter, AllCharacters},
+  components: {TheHeader, Filter, AllCharacters, TheLoader},
   data(){
     return{
-      
+      store
     }
   }
 }

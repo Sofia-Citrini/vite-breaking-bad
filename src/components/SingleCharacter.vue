@@ -1,8 +1,8 @@
 <template>
     <div class="my-card">
         <h3 class="text-color">{{character.name}}</h3>
-        <div class="text-black">{{character.gender}}</div>
-        <div class="text-black">{{character.height}}</div>
+        <div class="text">{{character.gender}}</div>
+        <div class="text">{{character.height}}</div>
     </div>
 </template>
 
@@ -29,6 +29,10 @@
             text-transform: uppercase;
             font-size: medium;
             font-weight: bolder;
+        }
+
+        .text{
+            color: $color-tertiary;
         }
     }
 </style>

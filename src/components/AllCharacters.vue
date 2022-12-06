@@ -3,7 +3,7 @@
         <div class="container py-3">
             <div class="banner">Found {{elements}} characters</div>
 
-            <div class="row row-cols-5 my-4 gy-4 gx-3">
+            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 my-4 gy-4 gx-3">
                 <div class="col" v-for="(element, i) in store.characters" :key="i">
                     <SingleCharacter :character="element"></SingleCharacter>
                 </div>
@@ -26,15 +26,26 @@
             }
         },
         created(){
+            this.store.loading  = true;
+
             axios.get("https://swapi.dev/api/people/")
             .then ((resp) => {
                 console.log(resp.data);
                 console.log(resp.data.results);
-
                 this.elements = resp.data.count;
 
                 this.store.characters = resp.data.results;
                 console.log(this.store.characters)
+
+                // this.store.loading = false;
+
+                setTimeout(() => {
+                this.store.loading = false;
+                }, 3000);
+            })
+            .catch ((error) => {
+                alert("l'operazione non é andata a buon fine");
+                this.store.loading = false;
             })
         }
     }
