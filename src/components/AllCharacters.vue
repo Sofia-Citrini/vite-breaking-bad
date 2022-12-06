@@ -1,10 +1,10 @@
 <template>
     <section>
-        <div class="container p-5">
+        <div class="container py-3">
             <div class="banner">Found {{elements}} characters</div>
 
-            <div class="row my-4 gy-4 gx-3">
-                <div class="col-6" v-for="(element, i) in store.characters" :key="i">
+            <div class="row row-cols-5 my-4 gy-4 gx-3">
+                <div class="col" v-for="(element, i) in store.characters" :key="i">
                     <SingleCharacter :character="element"></SingleCharacter>
                 </div>
             </div>
@@ -44,11 +44,9 @@
 @use '../styles/partials/variables' as *;
 
     .container{
-        background-color: $color-primary;
         border-radius: .5rem;
 
         .banner {
-            background-color: #fff;
             padding: $padding-1;
             border-radius: .5rem;
             font-weight:500;

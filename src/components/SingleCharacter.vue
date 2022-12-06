@@ -1,8 +1,8 @@
 <template>
     <div class="my-card">
         <h3 class="text-color">{{character.name}}</h3>
-        <div class="text-secondary">{{character.gender}}</div>
-        <div class="text-secondary">{{character.height}}</div>
+        <div class="text-black">{{character.gender}}</div>
+        <div class="text-black">{{character.height}}</div>
     </div>
 </template>
 
@@ -21,7 +21,7 @@
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss';
     .my-card{
-        background-color: #fff;
+        background-color: $color-secondary;
         padding: $padding-1;
         border-radius: .5rem;
 

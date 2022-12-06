@@ -1,12 +1,13 @@
 <template>
-  <TheHeader></TheHeader>
+  <div class="page">
+    <TheHeader></TheHeader>
 
-  <main>
-    <Filter></Filter>
+    <main>
+      <Filter></Filter>
 
-    <AllCharacters></AllCharacters>
-  </main>
-  
+      <AllCharacters></AllCharacters>
+    </main>
+  </div>
   
 </template>
 
@@ -27,5 +28,13 @@ export default {
 </script>
 
 <style lang="scss">
-  @use "./styles/general.scss"
+  @use "./styles/general.scss";
+
+  .page{
+    height: 100vh;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://insolenzadir2d2.it/wp-content/uploads/2020/06/HD-Wallpapers-Star-Wars-005.jpg");
+  }
 </style>
