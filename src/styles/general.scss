@@ -1,1 +1,7 @@
-@use "bootstrap/scss/bootstrap"
+@use "bootstrap/scss/bootstrap";
+
+@use './partials/variables' as *;
+
+.text-color {
+    color: $color-primary;
+}
