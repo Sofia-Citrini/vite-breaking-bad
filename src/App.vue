@@ -1,15 +1,18 @@
 <template>
   <TheHeader></TheHeader>
 
+  <Filter></Filter>
+
   
   
 </template>
 
 <script>
-import TheHeader from './components/TheHeader.vue'
+import TheHeader from './components/TheHeader.vue';
+import Filter from './components/Filter.vue'
 
 export default {
-  components: {TheHeader},
+  components: {TheHeader, Filter},
   data(){
     return{
       
