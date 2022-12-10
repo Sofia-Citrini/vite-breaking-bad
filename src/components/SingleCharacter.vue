@@ -1,8 +1,10 @@
 <template>
     <div class="my-card">
         <h3 class="text-color">{{character.name}}</h3>
-        <div class="text">{{character.gender}}</div>
-        <div class="text">{{character.height}}</div>
+        <div class="text"><small>Birth year:</small> {{character.birth_year}}</div>
+        <div class="text"><small>Gender:</small> {{character.gender}}</div>
+        <div class="text"><small>Height:</small> {{character.height}}</div>
+        <div class="text"><small>mass:</small> {{character.mass}}</div>
     </div>
 </template>
 

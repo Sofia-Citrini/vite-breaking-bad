@@ -3,7 +3,7 @@
     <TheHeader></TheHeader>
 
     <main>
-      <Filter></Filter>
+      <Filter @clickGender="onSelect"></Filter>
 
       <AllCharacters></AllCharacters>
       <TheLoader v-if="store.loading"></TheLoader>
@@ -17,13 +17,21 @@ import TheHeader from './components/TheHeader.vue';
 import Filter from './components/Filter.vue';
 import AllCharacters from './components/AllCharacters.vue';
 import TheLoader from './components/TheLoader.vue';
-import {store} from './store'
+import {store, fetchCharactersList} from './store'
 
 export default {
   components: {TheHeader, Filter, AllCharacters, TheLoader},
   data(){
     return{
       store
+    }
+  },
+  methods: {
+    onSelect(selectedItem){
+      this.store.selectGender = selectedItem;
+      console.log (selectedItem);
+
+      fetchCharactersList();
     }
   }
 }
