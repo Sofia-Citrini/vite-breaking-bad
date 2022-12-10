@@ -3,7 +3,7 @@
     <TheHeader></TheHeader>
 
     <main>
-      <Filter @clickGender="onSelect"></Filter>
+      <Filter @enterName="onSelect"></Filter>
 
       <AllCharacters></AllCharacters>
       <TheLoader v-if="store.loading"></TheLoader>
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     onSelect(selectedItem){
-      this.store.selectGender = selectedItem;
+      this.store.selectName = selectedItem;
       console.log (selectedItem);
 
       fetchCharactersList();

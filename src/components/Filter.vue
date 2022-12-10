@@ -2,7 +2,7 @@
     <section class="py-3">
         <div class="container">
             <div class="text">Cerca il personaggio che desideri:</div>
-            <input type="text" v-model="filterGender" @keyup.enter="onGenderClick"
+            <input type="text" v-model="filterName" @keyup.enter="onNameClick"
             placeholder="Inserisci nome" class="my-input">
         </div>
     </section>
@@ -14,14 +14,14 @@ import {store} from "../store";
         data(){
             return{
                 store,
-                filterGender:""
+                filterName:""
             }
         },
         methods:{
-            onGenderClick(){
-                this.$emit("clickGender", this.filterGender);
+            onNameClick(){
+                this.$emit("enterName", this.filterName);
 
-                this.filterGender = "";
+                this.filterName = "";
             }
         }
     }

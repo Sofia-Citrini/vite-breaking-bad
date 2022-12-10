@@ -5,7 +5,7 @@ export const store = reactive({
     characters:[],
     loading: false,
     elements:"",
-    selectGender:''
+    selectName:''
 })
 
 export function fetchCharactersList () {
@@ -13,7 +13,7 @@ export function fetchCharactersList () {
 
     axios.get("https://swapi.dev/api/people/", {
         params: {
-            search:store.selectGender
+            search:store.selectName
         }
     })
     .then ((resp) => {
