@@ -1,14 +1,9 @@
 <template>
     <section class="py-3">
         <div class="container">
+            <div class="text">Cerca il personaggio che desideri:</div>
             <input type="text" v-model="filterGender" @keyup.enter="onGenderClick"
-            placeholder="Inserisci nome personaggio">
-            <!-- <select class="my-select" v-model="store.selectGender" @click="onGenderClick">
-                <option disabled value="">Selected Gender</option>
-                <option value="male">Male</option>
-                <option value="Female">Female</option>
-                <option value="n/a">n/a</option>
-            </select> -->
+            placeholder="Inserisci nome" class="my-input">
         </div>
     </section>
 </template>
@@ -35,7 +30,11 @@ import {store} from "../store";
 
 <style scoped lang="scss">
 @use '../styles/partials/variables' as *;
-.my-select {
+.text{
+    padding: .5rem 0;
+    color: $color-secondary;
+}
+.my-input {
     width:auto;
     padding: .5rem;
     border-radius: .5rem;
